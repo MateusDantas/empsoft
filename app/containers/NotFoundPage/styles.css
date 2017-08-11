@@ -1,0 +1,44 @@
+.not-found-main {
+  height: 100vh;
+  margin-top: -20px;
+}
+
+.not-found-body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d154z700j3zb48.cloudfront.net/stadium_img2.jpeg') no-repeat center;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0px;
+  font-weight: 100;
+  font-weight: normal;
+}
+
+.not-found-text {
+  font-weight: bold;
+  font-size: 120px;
+  margin-bottom: -30px;
+  color: white;
+}
+
+.not-found-msg {
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.not-found-warning {
+  font-weight: 300;
+  font-size: 50px;
+  color: #cc0404;
+}
