@@ -1,6 +1,10 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 
+import UserAvatar from 'react-user-avatar';
+
+import Logo from 'assets/logo.png';
+
 import styles from './styles.css';
 
 const ReactElement = React.Element;
@@ -9,7 +13,17 @@ const cx = classNames.bind(styles);
 class Header extends React.Component { // eslint-disable-line
   render(): ReactElement<any> {
     return (
-      <div className={cx('page-header')}></div>
+      <div className={cx('page-header', 'header')}>
+        <div className={cx('header-items')}>
+          <img src={Logo} className={cx('page-logo')} alt={'logo'} />
+          <span className={cx('header-item')}>
+            Contratar <i className={cx('fa', 'fa-sort-desc', 'header-icon')} aria-hidden="true"></i>
+          </span>
+        </div>
+        <div className={cx('header-profile')}>
+          <UserAvatar size="48" name="Mateus Dantas" />
+        </div>
+      </div>
     );
   }
 }

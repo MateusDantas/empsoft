@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import PageWrapper from 'components/PageWrapper';
+import Header from 'components/Header';
 
 const ReactElement = React.Element;
 
@@ -12,6 +13,7 @@ class App extends React.PureComponent { // eslint-disable-line react/prefer-stat
   render(): ReactElement<any> {
     return (
       <PageWrapper>
+        <Header />
         {React.cloneElement(this.props.children, {})}
       </PageWrapper>
     );

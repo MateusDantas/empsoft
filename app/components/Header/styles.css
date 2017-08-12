@@ -1,0 +1,41 @@
+.header {
+  background: grey;
+  margin-top: 0px !important;
+  padding: 5px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+  background: #fff;
+  min-height: 64px;
+  z-index: 1020;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.page-logo {
+  max-height: 70px;
+}
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.header-item {
+  margin-left: 10px;
+  display: flex;
+  font-size: 1.2em;
+  margin-left: 40px;
+  font-weight: 200;
+}
+
+.header-icon {
+  margin-left: 5px;
+}
+
+.header-profile {
+  margin-right: 200px;
+}
