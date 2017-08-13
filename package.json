@@ -216,6 +216,9 @@
     "react-bootstrap": "^0.31.2",
     "react-user-avatar": "^1.9.0"
   },
+  "optionalDependencies": {
+    "fsevents": "^1.0.15" 
+  },
   "devDependencies": {
     "antd": "^2.5.0",
     "babel-cli": "^6.18.0",
@@ -273,7 +276,6 @@
     "file-loader": "0.9.0",
     "flow-bin": "^0.35.0",
     "fontfaceobserver": "2.0.5",
-    "fsevents": "^1.0.15",
     "gerador-validador-cpf": "^3.1.1",
     "google-auth-library": "^0.9.9",
     "harmonymodule-webpack-plugin": "^0.1.2",

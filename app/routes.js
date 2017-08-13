@@ -21,7 +21,15 @@ export default function createRoutes() {
         System.import('containers/HomePage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      },
+      }
+    }, {
+      path: '/user',
+      name: 'user',
+      getComponent(nextState, cb) {
+        System.import('containers/UserPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      }
     }, {
       path: '*',
       name: 'notfound',
@@ -29,7 +37,7 @@ export default function createRoutes() {
         System.import('containers/NotFoundPage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      },
-    },
+      }
+    }
   ];
 }

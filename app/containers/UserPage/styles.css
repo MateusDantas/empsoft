@@ -1,0 +1,28 @@
+.page-body {
+  background: #e9eaec;
+  height: 100vh;
+}
+
+.page-container {
+  padding-top: 50px;
+}
+
+.page-filter-service {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.page-services {
+  display: flex;
+  flex-direction: column;
+  pad: 10px;
+  background: white;
+  margin-top: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+.service {  
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px;
+  font-weight: 200;
+}
