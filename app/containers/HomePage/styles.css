@@ -21,8 +21,76 @@
   border: 1px solid #e6e6e6;
 }
 
-.service {  
+.service {
   border-bottom: 1px solid #eaeaea;
   padding: 10px;
   font-weight: 200;
+}
+
+.profile-container {
+  margin-top: 28px;
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 265px;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 16px;
+  border-top: 1px solid #eee;
+  box-shadow: inset 0 1px 0 #fff;
+  position: relative;
+  justify-content: space-between;
+  background: #f9f9fa;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.profile-service {
+  font-weight: 200;
+}
+
+.profile-about {
+  margin-left: 10px;
+}
+
+.profile-info {
+  display: flex;
+}
+
+.profile-box-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile-more-info {
+  margin-top: 20px;
+  font-size: 0.8em;
+  font-weight: 200;
+  margin-left: 57px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.profile-more-info > div > span:not(:first-child) {
+  margin-left: 10px;
+}
+
+.service {
+  cursor: pointer;
+}
+
+.service:hover, .service.selected {
+  border-right: 3px solid #009caf;
 }
