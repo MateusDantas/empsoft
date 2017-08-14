@@ -55,3 +55,67 @@ body {
       width: 100%;
     }
   }
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 16px;
+  border-top: 1px solid #eee;
+  box-shadow: inset 0 1px 0 #fff;
+  position: relative;
+  justify-content: space-between;
+  background: #f9f9fa;
+}
+
+.details-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 16px;
+  border-top: 1px solid #eee;
+  box-shadow: inset 0 1px 0 #fff;
+  position: relative;
+  justify-content: space-between;
+  background: #f9f9fa;
+}
+
+.comment-box-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details-box-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.comment-box-title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.details-box-title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.details-box-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
