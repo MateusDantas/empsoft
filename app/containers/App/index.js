@@ -6,6 +6,10 @@ import { createStructuredSelector } from 'reselect';
 import PageWrapper from 'components/PageWrapper';
 import Header from 'components/Header';
 
+import 'antd/dist/antd.css';
+
+import { selectUsers } from './selectors';
+
 const ReactElement = React.Element;
 
 class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -14,13 +18,15 @@ class App extends React.PureComponent { // eslint-disable-line react/prefer-stat
     return (
       <PageWrapper>
         <Header />
-        {React.cloneElement(this.props.children, {})}
+        {React.cloneElement(this.props.children, { users: this.props.users })}
       </PageWrapper>
     );
   }
 }
 
-const mapStateToProps = createStructuredSelector({});
+const mapStateToProps = createStructuredSelector({
+  users: selectUsers(),
+});
 
 function mapDispatchToProps() {
   return {};

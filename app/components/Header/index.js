@@ -1,4 +1,5 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 import classNames from 'classnames/bind';
 
 import UserAvatar from 'react-user-avatar';
@@ -15,9 +16,9 @@ class Header extends React.Component { // eslint-disable-line
     return (
       <div className={cx('page-header', 'header')}>
         <div className={cx('header-items')}>
-          <img src={Logo} className={cx('page-logo')} alt={'logo'} />
-          <span className={cx('header-item')}>
-            Contratar <i className={cx('fa', 'fa-sort-desc', 'header-icon')} aria-hidden="true"></i>
+          <img src={Logo} className={cx('page-logo')} alt={'logo'} onClick={() => browserHistory.push('/')} />
+          <span className={cx('header-item')} onClick={() => browserHistory.push('/')} >
+            Contratar <i className={cx('fa', 'fa-sort-desc', 'header-icon')} aria-hidden="true" />
           </span>
         </div>
         <div className={cx('header-profile')}>

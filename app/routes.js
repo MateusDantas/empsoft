@@ -23,7 +23,7 @@ export default function createRoutes() {
           .catch(errorLoading);
       }
     }, {
-      path: '/user/:idUser',
+      path: '/user/:user_id',
       name: 'user',
       getComponent(nextState, cb) {
         System.import('containers/UserPage')

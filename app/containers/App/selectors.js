@@ -1,3 +1,12 @@
+import { createSelector } from 'reselect';
+
+const selectApp = () => (state) => state.get('app');
+
+const selectUsers = () => createSelector(
+  selectApp(),
+  (appState) => appState.get('users'),
+);
+
 const selectLocationState = () => {
   let prevRoutingState;
   let prevRoutingStateJS;
@@ -16,4 +25,5 @@ const selectLocationState = () => {
 
 export {
   selectLocationState,
+  selectUsers,
 };
