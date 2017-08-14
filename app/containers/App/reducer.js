@@ -9,6 +9,20 @@ const initialState = fromJS({
       rating: 4.0,
       location: 'Campina Grande',
       lastJobs: 14,
+      comments: [
+        {
+          id: 0,
+          name: 'Dilma',
+          text: 'Muito Bom!',
+          rating: 5.0,
+        },
+        {
+          id: 1,
+          name: 'Lula',
+          text: 'ja vi melhores',
+          rating: 2.3,
+        },
+      ],
     },
     {
       id: 1,
@@ -17,6 +31,26 @@ const initialState = fromJS({
       rating: 4.5,
       location: 'Campina Grande',
       lastJobs: 11,
+      comments: [
+        {
+          id: 2,
+          name: 'José Serra',
+          text: 'Serviço muito ruim!',
+          rating: 1.6,
+        },
+        {
+          id: 3,
+          name: 'Cicero Almeida',
+          text: 'Péssimo!',
+          rating: 2.4,
+        },
+        {
+          id: 4,
+          name: 'Aécio Neves',
+          text: 'Ótimo',
+          rating: 4.3,
+        },
+      ],
     },
     {
       id: 2,
@@ -25,6 +59,14 @@ const initialState = fromJS({
       rating: 5.0,
       location: 'Campina Grande',
       lastJobs: 16,
+      comments: [
+        {
+          id: 5,
+          name: 'Veneziano',
+          text: 'Fez o que devia ter feito!',
+          rating: 3.6,
+        },
+      ],
     },
     {
       id: 3,
@@ -33,6 +75,20 @@ const initialState = fromJS({
       rating: 4.3,
       location: 'Campina Grande',
       lastJobs: 5,
+      comments: [
+        {
+          id: 6,
+          name: 'Eduardo Cunha',
+          text: 'Bom',
+          rating: 4.2,
+        },
+        {
+          id: 7,
+          name: 'Trump',
+          text: 'You can do better',
+          rating: 2.8,
+        },
+      ],
     },
     {
       id: 4,
@@ -41,6 +97,26 @@ const initialState = fromJS({
       rating: 3.5,
       location: 'Campina Grande',
       lastJobs: 5,
+      comments: [
+        {
+          id: 8,
+          name: 'Marechal Deodoro',
+          text: 'Regular...',
+          rating: 3.1,
+        },
+        {
+          id: 9,
+          name: 'Shia LaBeouf',
+          text: 'Just do it!',
+          rating: 2.3,
+        },
+        {
+          id: 10,
+          name: 'Sarney',
+          text: 'Muito ruim!',
+          rating: 1.4,
+        },
+      ],
     },
     {
       id: 5,
@@ -49,6 +125,14 @@ const initialState = fromJS({
       rating: 3.9,
       location: 'Campina Grande',
       lastJobs: 40,
+      comments: [
+        {
+          id: 11,
+          name: 'Joaquim Barbosa',
+          text: 'Excelente!',
+          rating: 5.0,
+        },
+      ],
     },
     {
       id: 6,
@@ -57,6 +141,14 @@ const initialState = fromJS({
       rating: 2.5,
       location: 'Campina Grande',
       lastJobs: 50,
+      comments: [
+        {
+          id: 12,
+          name: 'Delman',
+          text: 'Serviço bom, profissional competente',
+          rating: 4.3,
+        },
+      ],
     },
   ],
 });
