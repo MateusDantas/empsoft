@@ -186,6 +186,12 @@ const initialState = fromJS({
           text: 'Nao existe melhor!',
           rating: 5.0,
         },
+        {
+          id: 15,
+          name: 'Bill Gates',
+          text: 'This is the one!',
+          rating: 5.0,
+        },
       ],
     },
   ],
