@@ -21,7 +21,7 @@ export default function createRoutes() {
         System.import('containers/HomePage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      }
+      },
     }, {
       path: '/user/:user_id',
       name: 'user',
@@ -29,7 +29,15 @@ export default function createRoutes() {
         System.import('containers/UserPage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      }
+      },
+    }, {
+      path: '/profile/:user_id',
+      name: 'profile',
+      getComponent(nextState, cb) {
+        System.import('containers/ProfilePage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
     }, {
       path: '*',
       name: 'notfound',
@@ -37,7 +45,7 @@ export default function createRoutes() {
         System.import('containers/NotFoundPage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      }
-    }
+      },
+    },
   ];
 }

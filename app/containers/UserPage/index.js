@@ -14,13 +14,11 @@ class Avatar extends React.Component {
         style = {
           width: this.props.width || 50,
           height: this.props.height || 50
-        }; 
-    
+        };
     if (!image) return null;
-    
     return (
      <div className={cx('avatar')} style={style}>
-           <img src={this.props.image} /> 
+           <img src={this.props.image} />
       </div>
     );
   }
@@ -30,12 +28,11 @@ class MainPanel extends React.Component {
   render() {
     var info = this.props.info;
     if (!info) return null;
-    
     return (
      <div>
         <div className={cx('top')}>
             <Avatar 
-               image={info.photo} 
+               image={info.photo}
                width={100}
                height={100}
             /> 
@@ -73,7 +70,7 @@ class UserPage extends React.Component {
           <Comments {...this.props}/>
         </Col>
       </Row>
-    )
+    );
   }
 }
 
