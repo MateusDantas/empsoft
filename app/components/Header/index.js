@@ -21,7 +21,7 @@ class Header extends React.Component { // eslint-disable-line
             Contratar <i className={cx('fa', 'fa-sort-desc', 'header-icon')} aria-hidden="true" />
           </span>
         </div>
-        <div className={cx('header-profile')}>
+        <div className={cx('header-profile')} onClick={() => browserHistory.push('/profile/999')}>
           <UserAvatar size="48" name="Mateus Dantas" />
         </div>
       </div>

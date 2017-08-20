@@ -164,6 +164,36 @@ const initialState = fromJS({
         },
       ],
     },
+    {
+      id: 999,
+      name: 'Mateus Dantas',
+      service: 'Desenvolvedor',
+      photo: "http://portaltudo.com.br/wp-content/uploads/2017/05/michel-temer.jpg",
+      rating: 5.0,
+      location: 'Campina Grande',
+      bio: "Desenvolvedor com 10 anos de experiência.",
+      lastJobs: 14,
+      comments: [
+        {
+          id: 13,
+          name: 'Larry Page',
+          text: 'Muito Bom!',
+          rating: 5.0,
+        },
+        {
+          id: 14,
+          name: 'Mark Zuckerberg',
+          text: 'Nao existe melhor!',
+          rating: 5.0,
+        },
+        {
+          id: 15,
+          name: 'Bill Gates',
+          text: 'This is the one!',
+          rating: 5.0,
+        },
+      ],
+    },
   ],
 });
 
