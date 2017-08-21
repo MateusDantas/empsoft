@@ -15,7 +15,9 @@ export default class ProfilePage extends React.Component { // eslint-disable-lin
   constructor(props: Object) {
     super(props);
   }
+
   props: Object;
+
   render() {
     const curruser = this.props.users
         .find((user) => user.get('id').toString() === this.props.params.user_id)
