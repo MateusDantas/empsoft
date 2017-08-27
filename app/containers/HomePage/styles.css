@@ -1,6 +1,7 @@
 .page-body {
   background: #e9eaec;
   height: 100vh;
+  background-color: #00626F;
 }
 
 .page-container {
@@ -21,14 +22,18 @@
   border: 1px solid #e6e6e6;
 }
 
+.icon {
+  max-height: 50px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 .service {
   border-bottom: 1px solid #eaeaea;
   padding: 10px;
   font-weight: 200;
-}
-
-.profile-container {
-  margin-top: 28px;
 }
 
 .profile-box {
@@ -42,11 +47,12 @@
   float: left;
   height: auto;
   padding: 16px;
-  border-top: 1px solid #eee;
-  box-shadow: inset 0 1px 0 #fff;
+  border-top: 1px solid #00626f;
+  box-shadow: inset 0 1px 0 #00626f;
   position: relative;
   justify-content: space-between;
   background: #f9f9fa;
+  background-color: #277E86;
 }
 
 .profile-name {

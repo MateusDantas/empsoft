@@ -5,6 +5,8 @@ import { browserHistory } from 'react-router';
 import UserAvatar from 'react-user-avatar';
 import StarRatingComponent from 'react-star-rating-component';
 import { Row, Col } from 'react-bootstrap';
+import ToolsIcon from 'assets/tools.png';
+import PeopleIcon from 'assets/people.png';
 
 import styles from './styles.css';
 
@@ -29,9 +31,9 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
         <div className={cx('page-container')}>
           <Row>
             <Col xs={1} md={2} xsOffset={1}>
-              <span>Filtrar por Serviço</span>
+              <img src={ToolsIcon} className={cx('icon')}></img>
               <div className={cx('page-services')}>
-                <span
+                <span style={{ border:'10px' }}
                   className={cx({
                     service: true,
                     selected: this.state.service === 'Encanador',
@@ -147,8 +149,9 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
                 </span>
               </div>
             </Col>
-            <Col xs={8} md={8} className={cx('profile-container')}>
-              <Scrollbars style={{ width: '100%', height: '80vh' }}>
+            <Col xs={8} md={8}>
+              <img src={PeopleIcon} className={cx('icon')}></img>
+              <Scrollbars style={{ width: '100%', height: '80vh', 'margin-top':'10px' }}>
                 {users.map((user) => (
                   <div className={cx('profile-box')} onClick={() => browserHistory.push(`/user/${user.id}`)}>
                     <div className={cx('profile-box-info')}>
