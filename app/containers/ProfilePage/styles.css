@@ -1,7 +1,6 @@
 body {
     color: black;
     background-color: $magenta;
-    padding: 20px 30px;
     font-family: sans-serif;
 }
 

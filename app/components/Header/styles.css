@@ -44,4 +44,12 @@
 
 .header-profile {
   margin-right: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:global(.ant-badge) {
+  margin-right: 20px;
+  cursor: pointer;
 }
