@@ -8,6 +8,7 @@ import UserAvatar from 'react-user-avatar';
 import Modal from 'react-awesome-modal';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import Icon from 'assets/iconehomem.png';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const cx = classNames.bind(styles);
@@ -83,13 +84,13 @@ class MainPanel extends React.Component {
         <div className={cx('bottom')}>
           <h4>Descrição</h4>
           <p>{info.bio}</p>
-          <button className="btn btn-primary" onClick={() => this.openModal()}>Contratar</button>
+          <button className={cx('btn btn-primary')} onClick={() => this.openModal()}>Contratar</button>
           <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
               <div>
                   <h1>Oferta</h1>
                   <p>Início</p>
-                  <div className={cx('page-body')}>
-                    <div className={cx('page-container')}>
+                  <div className={cx('page-body-modal')}>
+                    <div className={cx('page-container-modal')}>
                       <Row>
                         <Col xs={12} md={12}>
                           <DatePicker
@@ -101,7 +102,7 @@ class MainPanel extends React.Component {
                     </div>
                   </div>
                   <p>Fim</p>
-                  <div className={cx('page-body')}>
+                  <div className={cx('page-body-modal')}>
                     <div className={cx('page-container')}>
                       <Row>
                         <Col xs={12} md={12}>
@@ -130,14 +131,16 @@ class UserPage extends React.Component {
     const usernow = this.props.users
         .find((user) => user.get('id').toString() === this.props.params.user_id).toJS();
     return (
-      <Row>
-        <Col xs={2} md={3} xsOffset={1}>
-          <div className={cx('user-profile')}>
-            <MainPanel info={usernow} />
-          </div>
-        </Col>
-        <Comments {...this.props} />
-      </Row>
+      <div className={cx('page-body')}>
+          <Row>
+              <Col xs={2} md={3} xsOffset={1}>
+                  <div className={cx('user-profile')}>
+                      <MainPanel info={usernow} />
+                  </div>
+              </Col>
+              <Comments {...this.props} />
+          </Row>
+      </div>
     );
   }
 }
@@ -152,13 +155,13 @@ class Comments extends React.Component {
         .toJS();
     return (
         <Col xs={8} md={8} className={cx('profile-container')}>
-            Comentários:
+            <p className={cx('comentarios-text')}> Comentários: </p>
             <Scrollbars style={{ width: '100%', height: '80vh' }}>
                 {comments.map((comment) => (
                     <div className={cx('profile-box')}>
                         <div className={cx('profile-box-info')}>
                             <div className={cx('profile-info')}>
-                                <UserAvatar size="48" name={comment.name} />
+                                <UserAvatar size="48" name={comment.name} src={Icon}/>
                                 <div className={cx('profile-about')}>
                                     <div className={cx('profile-name')}>{comment.name}</div>
                                     <div className={cx('profile-comment-text')}>{comment.text}</div>
@@ -166,12 +169,12 @@ class Comments extends React.Component {
                             </div>
                             <StarRatingComponent
                                 name="app5"
-                                starColor="#ffb400"
-                                emptyStarColor="#ffb400"
+                                starColor="#FFFFFF"
+                                emptyStarColor="#FFFFFF"
                                 value={comment.rating}
                                 editing={false}
                                 renderStarIcon={(index, value) => <span className={index <= value ? 'fa fa-star' : 'fa fa-star-o'} />}
-                                renderStarIconHalf={() => <span className="fa fa-star-half-full" />}
+                                renderStarIconHalf={() => <span className="fa fa-star-half-o" />}
                             />
                         </div>
                     </div>

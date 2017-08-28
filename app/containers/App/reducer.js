@@ -190,7 +190,7 @@ const initialState = fromJS({
           id: 15,
           name: 'Bill Gates',
           text: 'This is the one!',
-          rating: 5.0,
+          rating: 4.5,
         },
       ],
     },
