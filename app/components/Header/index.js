@@ -18,9 +18,17 @@ class Header extends React.Component { // eslint-disable-line
       <div className={cx('page-header', 'header')}>
         <div className={cx('header-items')}>
           <img src={Logo} className={cx('page-logo')} alt={'logo'} onClick={() => browserHistory.push('/')} />
-          <span className={cx('header-item')} onClick={() => browserHistory.push('/')} >
-            Contratar <i className={cx('fa', 'fa-sort-desc', 'header-icon')} aria-hidden="true" />
-          </span>
+          <div className={cx('header-options')}>
+            <div className={cx('header-title')}>Serviços de qualidade na palma da sua mão</div>
+            <div className={cx('header-options-menu')}>
+              <span className={cx('header-item')} onClick={() => browserHistory.push('/')} >
+                Início
+              </span>
+              <span className={cx('header-item-text')} onClick={() => browserHistory.push('/profile/8')} >
+                |       Seja bem-vindo Neymar Jr
+              </span>
+            </div>
+          </div>
         </div>
         <div className={cx('header-profile')}>
           <Popconfirm
@@ -30,7 +38,7 @@ class Header extends React.Component { // eslint-disable-line
           >
             <Badge dot><Icon type="notification" /></Badge>
           </Popconfirm>
-          <UserAvatar onClick={() => browserHistory.push('/profile/8')} size="48" name="Mateus Dantas" />
+          <UserAvatar onClick={() => browserHistory.push('/profile/8')} size="48" name="Neymar Jr" />
         </div>
       </div>
     );
