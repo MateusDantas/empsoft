@@ -8,6 +8,9 @@ import { Row, Col } from 'react-bootstrap';
 
 import styles from './styles.css';
 
+import Ferramentas from 'assets/ferramentas.png';
+import Pessoas from 'assets/pessoas.png';
+
 const cx = classNames.bind(styles);
 
 export class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -29,7 +32,7 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
         <div className={cx('page-container')}>
           <Row>
             <Col xs={1} md={2} xsOffset={1}>
-              <span>Filtrar por Serviço</span>
+              <span style={{ display: 'flex', justifyContent: 'center' }}><img style={{ height: 50 }} src={Ferramentas} alt="ferramentas" /></span>
               <div className={cx('page-services')}>
                 <span
                   className={cx({
@@ -148,7 +151,8 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
               </div>
             </Col>
             <Col xs={8} md={8} className={cx('profile-container')}>
-              <Scrollbars style={{ width: '100%', height: '80vh' }}>
+              <span style={{ display: 'flex', justifyContent: 'center' }}><img style={{ height: 50 }} src={Pessoas} alt="ferramentas" /></span>
+              <Scrollbars style={{ width: '100%', height: '80vh', marginTop: '10px' }}>
                 {users.map((user) => (
                   <div className={cx('profile-box')} onClick={() => browserHistory.push(`/user/${user.id}`)}>
                     <div className={cx('profile-box-info')}>
@@ -161,8 +165,8 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
                       </div>
                       <StarRatingComponent
                         name="app5"
-                        starColor="#ffb400"
-                        emptyStarColor="#ffb400"
+                        starColor="#FFFFFF"
+                        emptyStarColor="#FFFFFF"
                         value={user.rating}
                         editing={false}
                         renderStarIcon={(index, value) => <span className={index <= value ? 'fa fa-star' : 'fa fa-star-o'} />}

@@ -4,7 +4,7 @@
   padding: 5px;
   box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
   background: #fff;
-  min-height: 64px;
+  min-height: 100px;
   z-index: 1020;
   display: flex;
   flex-direction: row;
@@ -23,6 +23,7 @@
   flex-direction: row;
   align-items: center;
   margin-left: 200px;
+  flex: 1.5;
 }
 
 .header-item {
@@ -34,7 +35,15 @@
   cursor: pointer;
 }
 
-.header-item:hover {
+.header-item-text {
+  margin-left: 10px;
+  display: flex;
+  font-size: 1.2em;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.header-item:hover,.header-item-text:hover  {
   color: #009caf;
 }
 
@@ -44,4 +53,31 @@
 
 .header-profile {
   margin-right: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:global(.ant-badge) {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-options {
+  flex: 0.95;
+}
+
+.header-title {
+  margin-left: 10px;
+  display: flex;
+  font-size: 1.5em;
+  margin-left: 40px;
+  font-weight: 200;
+  margin-bottom: 8px;
+}
+
+.header-options-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

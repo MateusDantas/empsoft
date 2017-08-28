@@ -1,7 +1,6 @@
 body {
   color: black;
   background-color: $magenta;
-  padding: 20px 30px;
   font-family: sans-serif;
 }
 
@@ -20,31 +19,31 @@ body {
   box-shadow: 2px 2px 5px #00626d;
   border: 1px solid #00626d;
   background-color: #FFFFFF;
-  
+
   hr {
     margin: 20px auto;
     width: 50px;
     border: 1px solid $magenta;
     background-color: transparent;
   }
-  
+
   h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
-  
+
   h2 {
     font-size: 30px;
   }
-  
+
   h3 {
     font-size: 18px;
   }
-  
+
   h4 {
     font-size: 16px;
-    
+
   }
-  
+
   p {
     font-size: 14px;
   }

@@ -1,12 +1,12 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, FormGroup, ControlLabel, InputGroup, FormControl } from 'react-bootstrap';
 import StarRatingComponent from 'react-star-rating-component';
 import { Scrollbars } from 'react-custom-scrollbars';
 import styles from './styles.css';
 import UserAvatar from 'react-user-avatar';
 import Modal from 'react-awesome-modal';
-import DatePicker from 'react-datepicker';
+import DatePicker from 'react-bootstrap-date-picker';
 import moment from 'moment';
 import Icon from 'assets/iconehomem.png';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -58,7 +58,7 @@ class MainPanel extends React.Component {
       visible : true
     });
   }
- 
+
   closeModal() {
     this.setState({
       visible : false
@@ -70,55 +70,52 @@ class MainPanel extends React.Component {
     return (
      <div>
         <div className={cx('top')}>
-            <Avatar 
+            <Avatar
                image={info.photo}
                width={90}
                height={90}
-            /> 
+            />
             <h2>{info.name}</h2>
             <h3>de {info.location}</h3>
-          
+
           <hr />
         </div>
-        
+
         <div className={cx('bottom')}>
           <h4>Descrição</h4>
           <p>{info.bio}</p>
-          <button className={cx('btn btn-primary')} onClick={() => this.openModal()}>Contratar</button>
-          <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
-              <div>
-                  <h1>Oferta</h1>
-                  <p>Início</p>
-                  <div className={cx('page-body-modal')}>
-                    <div className={cx('page-container-modal')}>
-                      <Row>
-                        <Col xs={12} md={12}>
-                          <DatePicker
-                              selected={this.state.firstStartDate}
-                              onChange={this.handleChangeFirst}
-                          />
-                        </Col>
-                      </Row>
-                    </div>
-                  </div>
-                  <p>Fim</p>
-                  <div className={cx('page-body-modal')}>
-                    <div className={cx('page-container')}>
-                      <Row>
-                        <Col xs={12} md={12}>
-                          <DatePicker
-                              selected={this.state.secondStartDate}
-                              onChange={this.handleChangeSecond}
-                          />
-                        </Col>
-                      </Row>
-                    </div>
-                  </div>
-                  <p>Pagamento</p>
-                  R$ <input type="number" step="0.01" style={{border: '1px solid #0c0c0c'}}/>
-                  <br/><br/>
-                  <button className="btn btn-primary">Enviar Oferta</button>
-              </div>
+          <button className="btn btn-primary" onClick={() => this.openModal()}>Contratar</button>
+          <Modal visible={this.state.visible} width="600" height="600" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+            <div className={cx('modal-body')}>
+              <h1>Oferta</h1>
+              <FormGroup>
+                <ControlLabel>Escolha a data inicial</ControlLabel>
+                <DatePicker
+                  value={this.state.firstStartDate.toISOString()}
+                  onChange={this.handleChangeFirst}
+                />
+              </FormGroup>
+              <FormGroup>
+                <ControlLabel>Escolha a data final</ControlLabel>
+                <DatePicker
+                  value={this.state.secondStartDate.toISOString()}
+                  onChange={this.handleChangeSecond}
+                />
+              </FormGroup>
+              <FormGroup>
+                <ControlLabel>Escolha o seu orçamento máximo</ControlLabel>
+                <InputGroup>
+                  <InputGroup.Addon>R$</InputGroup.Addon>
+                  <FormControl type="text" />
+                  <InputGroup.Addon>.00</InputGroup.Addon>
+                </InputGroup>
+              </FormGroup>
+              <FormGroup controlId="formControlsTextarea">
+                <ControlLabel>Especifique o serviço desejado</ControlLabel>
+                <FormControl componentClass="textarea" placeholder="textarea" />
+              </FormGroup>
+              <button className="btn btn-primary" onClick={() => this.closeModal()}>Enviar Oferta</button>
+            </div>
           </Modal>
         </div>
       </div>
