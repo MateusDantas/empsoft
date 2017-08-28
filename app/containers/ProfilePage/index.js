@@ -1,13 +1,11 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import classNames from 'classnames/bind';
-import { browserHistory } from 'react-router';
 import UserAvatar from 'react-user-avatar';
 import StarRatingComponent from 'react-star-rating-component';
 import { Row, Col } from 'react-bootstrap';
-
+import Icon from 'assets/iconehomem.png';
 import styles from './styles.css';
-import UserPage from "../UserPage/index";
 
 const cx = classNames.bind(styles);
 
@@ -25,7 +23,7 @@ export default class ProfilePage extends React.Component { // eslint-disable-lin
     return (
       <div className={cx('page-body')}>
         <Row>
-          <Col xs={2} md={3} xsOffset={1}>
+          <Col xs={2} md={3} xsOffset={1} className={cx('col-main-panel')}>
             <div className={cx('user-avatar')}>
               <MainPanel info={curruser} />
             </div>
@@ -89,13 +87,13 @@ class Comments extends React.Component {
             .toJS();
         return (
             <Col xs={8} md={8} className={cx('profile-container')}>
-                Sobre seus serviços:
+                <p className={cx('servicos-text')}> Sobre seus serviços: </p>
                 <Scrollbars style={{ width: '100%', height: '80vh' }}>
                     {comments.map((comment) => (
                         <div className={cx('profile-box')}>
                             <div className={cx('profile-box-info')}>
                                 <div className={cx('profile-info')}>
-                                    <UserAvatar size="48" name={comment.name} />
+                                    <UserAvatar size="48" name={comment.name} src={Icon}/>
                                     <div className={cx('profile-about')}>
                                         <div className={cx('profile-name')}>{comment.name}</div>
                                         <div className={cx('profile-comment-text')}>{comment.text}</div>
@@ -103,12 +101,12 @@ class Comments extends React.Component {
                                 </div>
                                 <StarRatingComponent
                                     name="app5"
-                                    starColor="#ffb400"
-                                    emptyStarColor="#ffb400"
+                                    starColor="#FFFFFF"
+                                    emptyStarColor="#FFFFFF"
                                     value={comment.rating}
                                     editing={false}
-                                    renderStarIcon={(index, value) => <span className={index <= value ? 'fa fa-star' : 'fa fa-star-o'} />}
-                                    renderStarIconHalf={() => <span className="fa fa-star-half-full" />}
+                                    renderStarIcon={(index, value) => <span className={index <= value ? 'fa fa-star' : 'fa fa-star-o'}/>}
+                                    renderStarIconHalf={() => <span className="fa fa-star-half-o" />}
                                 />
                             </div>
                         </div>
